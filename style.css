@@ -333,29 +333,25 @@ section h2 {
 .gallery-slider {
   overflow: hidden;
   width: 100%;
-  margin-top: 40px;
 }
 
 .gallery-track {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  width: max-content;
   animation: scroll 20s linear infinite;
 }
 
 .gallery-track img {
-  width: 350px;
+  width: 300px;
   border-radius: 10px;
-}
-
-.gallery-track:hover {
-  animation-play-state: paused;
+  flex-shrink: 0;
 }
 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-50%);
   }
@@ -534,12 +530,12 @@ section {
   padding: 60px 20px;
 }
 
-.gallery-track {
-  animation: scroll 20s linear infinite;
-}
-
 @media (max-width: 768px) {
   .gallery-track {
-    animation: scroll 15s linear infinite;
+    animation: scroll 12s linear infinite;
+  }
+
+  .gallery-track img {
+    width: 250px;
   }
 }
